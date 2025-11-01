@@ -9,6 +9,8 @@
         content="WDD 131 – Dynamic Web Fundamentals | Alejandro Valladares | HTML, CSS, JavaScript fundamentals for web development.">
     <meta name="author" content="Alejandro Valladares">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap"
         rel="stylesheet">
@@ -18,8 +20,8 @@
     <header class="site-header">
         <div class="topbar">
             <div class="container">
-                <h1 class="site-title">WDD 131: Dynamic Web Fundamentals <span class="author">- Alejandro
-                        Valladares</span></h1>
+                <span id="course-title" class="site-title">WDD 131: Dynamic Web Fundamentals</span>
+                <span class="author">- Alejandro Valladares</span>
             </div>
         </div>
         <nav class="main-nav">
@@ -35,6 +37,7 @@
     </header>
 
     <main class="container">
+        <h1 class="student-name">Alejandro Valladares</h1>
         <div class="grid">
             <section class="card about">
                 <h2>About Me</h2>
@@ -60,7 +63,7 @@
                 </div>
             </section>
 
-            <aside class="card sidebar">
+            <section class="card sidebar">
                 <h2>Web Dev Resources</h2>
                 <ul class="resources">
                     <li><a href="#">Dev.to Community</a></li>
@@ -70,7 +73,7 @@
                     <li><a href="#">Udemy</a></li>
                     <li><a href="#">Image Placeholder</a></li>
                 </ul>
-            </aside>
+            </section>
         </div>
 
     </main>
