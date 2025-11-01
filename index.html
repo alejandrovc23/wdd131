@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Alejandro Valladares</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals | Alejandro Valladares | HTML, CSS, JavaScript fundamentals for web development.">
+    <meta name="author" content="Alejandro Valladares">
+    <link rel="stylesheet" href="styles/base.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <h1>WDD 131 - Alejandro</h1>
+    <header class="site-header">
+        <div class="topbar">
+            <div class="container">
+                <h1 class="site-title">WDD 131: Dynamic Web Fundamentals <span class="author">- Alejandro
+                        Valladares</span></h1>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                    <li><a href="#">Scripture</a></li>
+                    <li><a href="#">Final Project</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <section class="card about">
+                <h2>About Me</h2>
+                <div class="about-inner">
+                    <div class="about-text">
+                        <p>My name is Alejandro. I was born in Lima, Callao, Peru, and I live with my family in Lima.
+                            I'm currently studying Industrial and Commercial Engineering and Software Development. I
+                            enjoy working out at the gym and spending time with my family and friends. I also love
+                            Peruvian food.</p>
+                        <!-- Place image: drop an image in images/ and set the src below (e.g. images/lima-banner.jpg).
+                             If no image is provided the layout will remain unchanged. -->
+                        <div class="place-image-wrap">
+                            <img src="images/lima.jpeg" alt="Lima, Peru" class="place-image">
+                        </div>
+                        <h3 class="place">Lima, Peru</h3>
+                        <p class="place-desc">Lima is the capital city of Peru, located on the country’s central coast
+                            along the Pacific Ocean. It blends colonial history and modern life, and it's known
+                            worldwide for its cuisine and cultural heritage.</p>
+                    </div>
+                    <aside class="profile">
+                        <img src="images/profile.jpeg" alt="Photo of Alejandro" class="profile-image">
+                    </aside>
+                </div>
+            </section>
+
+            <aside class="card sidebar">
+                <h2>Web Dev Resources</h2>
+                <ul class="resources">
+                    <li><a href="#">Dev.to Community</a></li>
+                    <li><a href="#">Smashing Magazine</a></li>
+                    <li><a href="#">CSS Tricks</a></li>
+                    <li><a href="#">W3Schools</a></li>
+                    <li><a href="#">Udemy</a></li>
+                    <li><a href="#">Image Placeholder</a></li>
+                </ul>
+            </aside>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="copyright">&copy; <span id="currentyear"></span> Alejandro Valladares | Lima, Peru</p>
+            <p id="lastModified" class="lastmod">Last Modification: <span id="lastModValue"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
 </body>
+
 </html>
