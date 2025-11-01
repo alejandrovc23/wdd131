@@ -1,4 +1,3 @@
-/* Base styles to match the provided design */
 :root {
     --brand-blue: #1f5f7a;
     --brand-dark: #33373a;
@@ -32,18 +31,16 @@ body {
     padding: 0 20px
 }
 
-/* Ensure structural selectors exist to satisfy the audit tool */
 header {
-    /* ensure header has an explicit rule for the audit tool */
     display: block;
 }
 
 main {
-    /* main width limiting and centering is handled by .container; this ensures an explicit main selector exists */
+   
     padding: 18px 0;
 }
 
-/* Header */
+
 .site-header .topbar {
     background: var(--brand-blue);
     color: #fff;
@@ -93,7 +90,6 @@ main {
     text-decoration: underline
 }
 
-/* Page grid */
 .grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -152,7 +148,7 @@ main {
     text-align: justify
 }
 
-/* Place image styles (safe/responsive) */
+
 .place-image-wrap {
     display: flex;
     justify-content: center;
@@ -181,7 +177,7 @@ main {
     text-decoration: underline
 }
 
-/* Footer */
+
 .site-footer {
     background: var(--brand-blue);
     color: #fff;
@@ -200,7 +196,7 @@ main {
     font-size: 13px
 }
 
-/* Responsive */
+
 @media (max-width:880px) {
     .grid {
         grid-template-columns: 1fr
@@ -218,7 +214,18 @@ main {
     }
 }
 
-/* small helpers */
 .text-center {
     text-align: center
+}
+
+
+.site-header .topbar .container {
+    text-align: center;
+}
+
+.student-name {
+    text-align: center;
+    font-size: 2rem; 
+    margin-top: 10px;
+    color: var(--brand-dark); 
 }
