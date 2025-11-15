@@ -1,0 +1,222 @@
+:root {
+    --brand-red: #c91434;
+    --brand-green: #127a4a;
+    --bg: #ffffff;
+    --text: #222;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --accent: #f2c94c;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg)
+}
+
+/* Header */
+.site-header {
+    background: var(--brand-red);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+.byui {
+    font-weight: 700
+}
+
+.top-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 12px;
+    font-weight: 600
+}
+
+.top-nav {
+    display: none
+}
+
+.site-header #place-title {
+    margin: 10px 0;
+    font-size: 3rem
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit
+}
+
+.logo {
+    width: 44px;
+    height: auto;
+    display: block
+}
+
+.byui-text {
+    display: none;
+    font-weight: 800
+}
+
+
+/* Hero */
+.hero {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block
+}
+
+.card {
+    position: absolute;
+    background: var(--card-bg);
+    padding: 18px;
+    border-radius: 6px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    max-width: 320px
+}
+
+.data-card {
+    left: 40px;
+    top: 120px
+}
+
+.weather-card {
+    right: 40px;
+    bottom: 80px
+}
+
+.card h2 {
+    background: var(--brand-green);
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    margin: -18px -18px 10px -18px
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.card li {
+    margin: 8px 0
+}
+
+.weather-icon-mobile {
+    display: none;
+    margin: 0 auto 8px
+}
+
+.weather-info p {
+    margin: 6px 0
+}
+
+/* Focus and hover accessibility */
+.top-nav a:focus,
+.top-nav a:hover,
+.logo-link:focus,
+.logo-link:hover {
+    outline: 3px solid rgba(255, 255, 255, 0.12);
+    outline-offset: 4px;
+}
+
+
+/* Footer */
+.site-footer {
+    background: var(--brand-red);
+    color: #fff;
+    padding: 18px 0;
+    text-align: center;
+    margin-top: 30px
+}
+
+/* Responsive adjustments */
+@media (min-width:900px) {
+    .top-nav {
+        display: block
+    }
+
+    .site-header #place-title {
+        font-size: 4rem
+    }
+
+    .weather-heading::after {
+        content: ' ⛅';
+        font-size: 1.2rem;
+        margin-left: 8px
+    }
+
+    .weather-icon-mobile {
+        display: none
+    }
+}
+
+@media (max-width:899px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 8px
+    }
+
+    .site-header #place-title {
+        font-size: 2rem
+    }
+
+    .card {
+        position: relative;
+        margin: 18px auto;
+        padding: 24px;
+        max-width: 680px
+    }
+
+    .data-card {
+        left: auto;
+        top: auto;
+        right: auto
+    }
+
+    .weather-card {
+        right: auto;
+        bottom: auto
+    }
+
+    .weather-icon-mobile {
+        display: block;
+        text-align: center
+    }
+
+    .weather-heading::after {
+        content: ''
+    }
+
+    /* show text logo on small screens */
+    .byui-text {
+        display: inline-block
+    }
+
+    .logo {
+        display: none
+    }
+}

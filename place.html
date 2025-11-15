@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Place page for WDD 131 — Lima, Peru profile with responsive hero, data and weather.">
+    <meta name="author" content="Alejandro Valladares">
+    <title>WDD 131 – Place Page – Lima, Peru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <!-- Logo placeholder: replace with actual BYU-I logo image if available -->
+                <a href="index.html" class="logo-link" aria-label="BYU I Home">
+                    <img src="images/byui-logo-placeholder.svg" alt="BYU I logo" class="logo"
+                        onerror="this.style.display='inline-block'; this.nextElementSibling.style.display='inline-block'">
+                    <span class="byui-text">BYU‑I</span>
+                </a>
+            </div>
+            <nav class="top-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="#">W1</a>
+                <a href="#">W2</a>
+                <a href="#">W3</a>
+                <a href="#">W4</a>
+                <a href="#">W5</a>
+                <a href="#">W6</a>
+                <a href="#">W7</a>
+            </nav>
+        </div>
+        <h1 id="place-title">Lima, Peru</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="week03/images/hero-large.webp" media="(min-width:1000px)">
+                <source srcset="week03/images/hero-medium.webp" media="(min-width:550px)">
+                <img src="week03/images/hero-small.webp" alt="Lima, Peru landscape" width="1500" height="750">
+            </picture>
+
+            <!-- Overlay cards -->
+            <aside class="card data-card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Country:</strong> Peru</li>
+                    <li><strong>Region:</strong> Lima Province</li>
+                    <li><strong>Population:</strong> ~9,500,000 (metro)</li>
+                    <li><strong>Area:</strong> 2,672 km² (city)</li>
+                    <li><strong>Languages:</strong> Spanish, Quechua</li>
+                    <li><strong>Currency:</strong> Peruvian Sol (PEN)</li>
+                    <li><strong>Time Zone:</strong> PET (UTC−5)</li>
+                    <li><strong>Calling Code:</strong> +51</li>
+                </ul>
+            </aside>
+
+            <aside class="card weather-card">
+                <h2 class="weather-heading">Weather</h2>
+                <!-- SVG icon shown on small screens; hidden on large screens by CSS -->
+                <div class="weather-icon-mobile" aria-hidden="true">
+                    <!-- simple sun/cloud SVG -->
+                    <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img">
+                        <g fill="none" stroke="#f2c94c" stroke-width="2">
+                            <circle cx="24" cy="20" r="8" fill="#ffd166" stroke="none"></circle>
+                        </g>
+                        <g fill="#ffffff" stroke="#dfe7ea">
+                            <path d="M36 30a10 10 0 0 0-13 9h26a8 8 0 0 0-13-9z"></path>
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="weather-info">
+                    <p><strong>Temperature:</strong> <span id="temp">10</span> °C</p>
+                    <p><strong>Conditions:</strong> Partly Cloudy</p>
+                    <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> Alejandro Valladares | Lima, Peru</p>
+        <p id="lastModified">Last Modification: <span id="lastModValue"></span></p>
+    </footer>
+</body>
+
+</html>
