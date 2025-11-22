@@ -1,0 +1,98 @@
+/* Styles for filtered-temples.html */
+:root {
+    --card-bg: #f7f7f7;
+    --accent: #127a4a;
+    --text: #222
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Poppins, Arial, sans-serif;
+    margin: 0;
+    color: var(--text);
+    background: #fff
+}
+
+header {
+    padding: 18px;
+    background: #eee;
+    border-bottom: 1px solid #ddd
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    text-align: center
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 12px
+}
+
+.navigation a {
+    color: #333;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: var(--accent);
+    color: #fff
+}
+
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 16px
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px
+}
+
+figure {
+    background: var(--card-bg);
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15)
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: 700;
+    text-align: center
+}
+
+.meta {
+    font-size: 0.95rem;
+    color: #444;
+    margin-top: 8px
+}
+
+.meta p {
+    margin: 6px 0
+}
+
+footer {
+    padding: 18px;
+    text-align: center;
+    background: #fafafa;
+    border-top: 1px solid #eee;
+    margin-top: 30px
+}
