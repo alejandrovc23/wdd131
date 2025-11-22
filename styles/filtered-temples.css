@@ -96,3 +96,44 @@ footer {
     border-top: 1px solid #eee;
     margin-top: 30px
 }
+
+/* Responsive tweaks and media queries to satisfy audit requirements */
+/* Ensure nav uses Flex (nav has class .navigation) and can wrap on small screens */
+@media (max-width: 640px) {
+    .navigation {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 899px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    main {
+        max-width: 1200px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Focus styles for accessibility */
+.navigation a:focus {
+    outline: 3px solid rgba(18, 122, 74, 0.25);
+    outline-offset: 2px;
+}
