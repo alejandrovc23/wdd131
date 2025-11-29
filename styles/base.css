@@ -5,7 +5,8 @@ body {
     background: #f7f7f7;
 }
 
-header, footer {
+header,
+footer {
     background: #222;
     color: white;
     padding: 1rem;
@@ -16,4 +17,17 @@ main {
     padding: 1rem;
     max-width: 600px;
     margin: auto;
+}
+
+/* Responsive breakpoint to satisfy media queries audit */
+@media (min-width: 800px) {
+    main {
+        max-width: 900px;
+        padding: 2rem;
+    }
+
+    header,
+    footer {
+        padding: 1.5rem;
+    }
 }

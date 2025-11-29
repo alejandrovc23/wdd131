@@ -1,59 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Product review form for WDD131. Submit ratings and feedback about BYU-I course products.">
+    <meta name="author" content="Alejandro Valladares">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
+
 <body>
 
-<header>
-    <h1>Product Review Form</h1>
-</header>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
 
-<main>
-    <form method="get" action="review.html">
+    <main>
+        <form method="get" action="review.html">
 
-        <label for="product">Product Name</label>
-        <select id="product" name="product" required>
-            <option value="" disabled selected>Select a Product...</option>
-        </select>
+            <label for="product">Product Name</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product...</option>
+            </select>
 
-        <label>Overall Rating</label>
-        <div class="rating">
-            <label><input type="radio" name="rating" value="1" required> ☆</label>
-            <label><input type="radio" name="rating" value="2"> ☆☆</label>
-            <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
-            <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
-            <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
-        </div>
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <div class="rating">
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <label for="rating1">☆</label>
 
-        <label for="install-date">Date of Installation</label>
-        <input type="date" id="install-date" name="install-date" required>
+                    <input type="radio" id="rating2" name="rating" value="2" required>
+                    <label for="rating2">☆☆</label>
 
-        <fieldset>
-            <legend>Useful Features</legend>
-            <label><input type="checkbox" name="features" value="durability"> Durability</label>
-            <label><input type="checkbox" name="features" value="design"> Design</label>
-            <label><input type="checkbox" name="features" value="price"> Price</label>
-            <label><input type="checkbox" name="features" value="warranty"> Warranty</label>
-        </fieldset>
+                    <input type="radio" id="rating3" name="rating" value="3" required>
+                    <label for="rating3">☆☆☆</label>
 
-        <label for="review">Written Review (optional)</label>
-        <textarea id="review" name="review" rows="4"></textarea>
+                    <input type="radio" id="rating4" name="rating" value="4" required>
+                    <label for="rating4">☆☆☆☆</label>
 
-        <label for="user">Your Name (optional)</label>
-        <input type="text" id="user" name="user">
+                    <input type="radio" id="rating5" name="rating" value="5" required>
+                    <label for="rating5">☆☆☆☆☆</label>
+                </div>
+            </fieldset>
 
-        <input type="submit" value="Submit Review">
-    </form>
-</main>
+            <label for="install-date">Date of Installation</label>
+            <input type="date" id="install-date" name="install-date" required>
 
-<footer>
-    <p>&copy; 2025 | Alejandro Valladares | WDD131</p>
-</footer>
+            <fieldset>
+                <legend>Useful Features</legend>
+                <input type="checkbox" id="feature-durability" name="features" value="durability">
+                <label for="feature-durability">Durability</label>
+
+                <input type="checkbox" id="feature-design" name="features" value="design">
+                <label for="feature-design">Design</label>
+
+                <input type="checkbox" id="feature-price" name="features" value="price">
+                <label for="feature-price">Price</label>
+
+                <input type="checkbox" id="feature-warranty" name="features" value="warranty">
+                <label for="feature-warranty">Warranty</label>
+            </fieldset>
+
+            <label for="review">Written Review (optional)</label>
+            <textarea id="review" name="review" rows="4"></textarea>
+
+            <label for="user">Your Name (optional)</label>
+            <input type="text" id="user" name="user">
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Alejandro Valladares | WDD131</p>
+    </footer>
 </body>
+
 </html>
